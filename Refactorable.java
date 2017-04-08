@@ -13,15 +13,24 @@ public class Refactorable {
 		printBanner();
 		
 		//calculate outstanding
+		oustanding = calculateOustanding(e, oustanding);
+		
+		//print details
+		printDetails(oustanding);
+	}
+
+	public double calculateOustanding(Enumeration e, double oustanding) {
 		while(e.hasMoreElements()){
 			Order each = (Order) e.nextElement();
-			outstanding += each.getAmount();
+			oustanding += each.getAmount();
 		}
-		
+		return oustanding;
 	}
-	//print details
-	System.out.println("name: " + _name);
-	System.out.println("amount: " + outstanding);
+
+	public void printDetails(double oustanding) {
+		System.out.println("name: " + _name);
+		System.out.println("amount: " + oustanding);
+	}
 
 	public void printBanner() {
 		System.out.println("***********************");
