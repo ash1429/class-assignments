@@ -18,10 +18,10 @@ public class Refactorable {
 			outstanding += each.getAmount();
 		}
 		
-		//print details
-		System.out.println("name: " + _name);
-		System.out.println("amount: " + outstanding);
 	}
+	//print details
+	System.out.println("name: " + _name);
+	System.out.println("amount: " + outstanding);
 
 	public void printBanner() {
 		System.out.println("***********************");
